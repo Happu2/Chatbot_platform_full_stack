@@ -101,7 +101,7 @@ The application follows a **client-server architecture**.
 
 ### Frontend (Netlify)
 ```
-https://poetic-queijadas-4de696.netlify.app
+https://majestic-bienenstitch-2e958a.netlify.app
 ```
 
 ### Backend (Render)

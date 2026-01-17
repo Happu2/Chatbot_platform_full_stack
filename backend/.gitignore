@@ -1,0 +1,40 @@
+# ===== Node.js =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Environment variables =====
+.env
+.env.*
+!.env.example
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== Build / cache =====
+dist/
+build/
+.cache/
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== Test / coverage =====
+coverage/
+
+# ===== Sequelize =====
+sequelize-data.json
+
+# ===== Temporary files =====
+tmp/
+temp/

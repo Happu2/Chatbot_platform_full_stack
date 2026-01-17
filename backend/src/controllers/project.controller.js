@@ -1,9 +1,7 @@
 const Project = require("../models/Project");
 const Prompt = require("../models/Prompt");
 
-/**
- * Create Project
- */
+
 exports.createProject = async (req, res) => {
   try {
     const { name } = req.body;
@@ -19,9 +17,7 @@ exports.createProject = async (req, res) => {
   }
 };
 
-/**
- * Add Prompt to Project
- */
+
 exports.addPrompt = async (req, res) => {
   try {
     const { content } = req.body;

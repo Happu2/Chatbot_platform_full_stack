@@ -2,9 +2,7 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const { generateToken } = require("../config/jwt");
 
-/**
- * Register User
- */
+
 exports.register = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -27,9 +25,7 @@ exports.register = async (req, res) => {
   }
 };
 
-/**
- * Login User
- */
+
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -44,7 +40,7 @@ exports.login = async (req, res) => {
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
-    // 🔥 CRITICAL LINE
+
     const token = generateToken(user.id);
 
     res.json({ token });

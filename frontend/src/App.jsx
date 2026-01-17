@@ -3,12 +3,12 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Projects from "./pages/Projects";
 import Chat from "./pages/Chat";
-import Navbar from "./components/Navbar";   // 👈 ADD THIS
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Navbar />   {/* 👈 THIS WAS MISSING */}
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Login />} />

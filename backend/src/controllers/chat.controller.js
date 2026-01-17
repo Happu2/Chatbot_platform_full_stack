@@ -6,7 +6,7 @@ exports.chatWithAgent = async (req, res) => {
   try {
     const { projectId, message } = req.body;
 
-    // ✅ Sequelize syntax
+
     const prompts = await Prompt.findAll({
       where: { ProjectId: projectId }
     });
@@ -20,7 +20,7 @@ exports.chatWithAgent = async (req, res) => {
       message
     });
 
-    // Gemini API call
+
     const geminiResponse = await axios.post(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
@@ -40,7 +40,7 @@ exports.chatWithAgent = async (req, res) => {
     const aiMessage =
       geminiResponse.data.candidates[0].content.parts[0].text;
 
-    // Save AI message
+
     await Chat.create({
       ProjectId: projectId,
       role: "assistant",

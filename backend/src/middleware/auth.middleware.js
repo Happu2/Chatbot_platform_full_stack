@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // ✅ FIX: store user as an object
+
     req.user = { userId: decoded.userId };
 
     next();
